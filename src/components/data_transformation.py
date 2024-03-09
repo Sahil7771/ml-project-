@@ -20,10 +20,6 @@ class DataTransformation:
     def __init__(self):
         self.data_transformation_config = DataTransformationConfig()
     def get_data_transformer_preprocessor(self):
-        '''
-        This function si responsible for data trnasformation
-        
-        '''
         try:
             numerical_columns = ["writing_score", "reading_score"]
             categorical_columns = [
@@ -98,8 +94,7 @@ class DataTransformation:
             file_path=self.data_transformation_config.preprossor_obj_file_path,
             obj=preprocessing_obj
             )
-            
-
+        
             return(
             train_arr,
             test_arr,
